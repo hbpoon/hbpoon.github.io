@@ -1,35 +1,140 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @hbpoon
+Sign out
+0
+0 1,797 94pan/94pan.github.io
+forked from qiubaiying/qiubaiying.github.io
+ Code  Pull requests 0  Projects 0  Wiki  Insights
+94pan.github.io/about.html
+a310a43  5 hours ago
+@94pan 94pan Update about.html
+@94pan @qiubaiying
+     
+146 lines (121 sloc)  4.66 KB
 ---
 layout: page
 title: "About"
-description: "Hey, this is HoiBan."
-header-img: "img/about-bg-walle.jpg"
-multilingual: true
+description: "Hey, this is HB."
+header-img: "img/post-bg-rwd.jpg"
 ---
 
 <!-- Language Selector -->
-<select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
     <option value="0" selected> 中文 Chinese </option>
     <option value="1"> 英文 English </option>
-</select>
+</select> -->
 
 <!-- Chinese Version -->
 <div class="zh post-container">
-    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
-    {{ about_zh | markdownify }}
+
+    <!--copied from markdown -->
+    <blockquote><p>即使輸掉一切<br>
+    也不要輸掉微笑</p></blockquote>
+    Hello，我是<strong>海斌(HB)</strong>，一名技術宅。
+    所在地：廣州
+    生日：08.16
+    愛好：画画、听歌
+    <p></p>
+    
+    <h5>Contact</h5>
+
+    <ul>
+        <li><a href="http://125.88.67.16:30001/PLTV/88888905/224/3221227484/10000100000000060000000003928833_0.smil">廣東體育</a></li>
+        <li><a href="http://116.199.5.51:8114/LIVES/index.m3u8?Fsv_otype=1&FvSeid=&Pcontent_id=&Provider_id=&Fsv_chan_hls_se_idx=15">廣東體育2</a></li>
+        <li><a href="rtsp://123.147.113.84:554/04000001/01000000004000000000000000000304?AuthInfo=xxx&userid=/">CCTV5HD</a></li> 
+        <li><a href="http://pulllive-al.wasu.cn/live/5f995db0ef7661bb556fbc83fb789a46.m3u8">TVB</a></li>
+        <li><a href="http://173.64.66.171/live/viutv.m3u8">Viutv</a></li>
+    </ul>
 </div>
 
 <!-- English Version -->
-<div class="en post-container">
-    {% capture about_en %}{% include about/en.md %}{% endcapture %}
-    {{ about_en | markdownify }}
-</div>
+<!-- <div class="en post-container">
+    <blockquote><p>Yet another iOS Developer. <br>
+    Yet another Life-long Student.</p></blockquote>
+    <p>Hi, I am <strong>Baiying Qiu</strong>，you can call me <strong>BY</strong>. I am an iOS software engineer and currently working in Xiamen</p>
+    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.com/qiubaiying">Github·BY</a>.</p>
+    
+    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
+    <h5>Talks</h5>
+    <ul>
+    <li><a href="https://github.com">GitHub</a></li>
+    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
+    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+    <li><a href="https://qiubaiying.github.io">BY</a></li>
+    </ul>
+</div> -->
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+    // init
+    _render();
+</script>
 
 
-{% if site.disqus_username %}
-<!-- disqus 评论框 start -->
+<!-- Gitalk 评论 start  -->
+{% if site.gitalk.enable %}
+<!-- Gitalk link  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+    <script type="text/javascript">
+    var gitalk = new Gitalk({
+    clientID: '{{site.gitalk.clientID}}',
+    clientSecret: '{{site.gitalk.clientSecret}}',
+    repo: '{{site.gitalk.repo}}',
+    owner: '{{site.gitalk.owner}}',
+    admin: ['{{site.gitalk.admin}}'],
+    distractionFreeMode: {{site.gitalk.distractionFreeMode}},
+    id: 'about',
+    });
+    gitalk.render('gitalk-container');
+</script>
+{% endif %}
+<!-- Gitalk end -->
+
+ <!-- disqus 评论框 start  -->
+{% if site.disqus.enable %}
+
 <div class="comment">
     <div id="disqus_thread" class="disqus-thread">
-
     </div>
 </div>
 <!-- disqus 评论框 end -->
@@ -37,10 +142,9 @@ multilingual: true
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
+    var disqus_shortname = "{{site.disqus.username}}";
+    var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
     var disqus_url = "{{site.url}}{{page.url}}";
-
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -49,3 +153,17 @@ multilingual: true
 </script>
 <!-- disqus 公共JS代码 end -->
 {% endif %}
+
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
+Press h to open a hovercard with more details.
