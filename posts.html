@@ -1,38 +1,87 @@
 ---
-layout: page
-title: "Posts"
-description: "Hey, this is HB."
-header-img: "img/post-bg-rwd.jpg"
+title: posts
+layout: default
+description: keep hungry keep foolish
+header-img: "img/tag-bg.jpg"
 ---
-<!DOCTYPE html>
-<html class="no-js">
-</head>
-<body>
-<p><img src="https://raw.githubusercontent.com/hbpoon/hbpoon.github.io/master/img/APtianqiao1.jpg" width="300" height="156" />
-</p>
-<p>手机随拍1</p>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" id="tag-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<table width="300" border="0">
+  <tr>
+    <td width="55">&nbsp;</td>
+    <td width="112">&nbsp;</td>
+    <td width="214"><div align="right">18/06/19</div></td>
+    <td width="7">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="4"><img src="https://raw.githubusercontent.com/hbpoon/hbpoon.github.io/master/img/APtianqiao1.jpg" width="400" height="235" /></td>
+  </tr>
+  <tr>
+    <td colspan="3">手机随拍1</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
 </body>
 </html>
-
-					<!--<li>
-						<div class="cbp_tmlabel">
-							<h2>SENOVA WebApp</h2>
-							<img src="images/senova.jpg">
-							<ul>
-								<li>《多媒体交互设计一》结课作业，以北汽“绅宝”为目标品牌，iPad 为主要平台进行的 App 设计，旨在用一种可交互的方式介绍“绅宝”车型。完全采用 Html5 技术开发，可添加至主屏幕离线运行。着力于触控交互体验的优化与优雅的动画设计。</li>
-								<li>Responsible : Front-End，Interaction，Product</li>
-								<li>Partner : ZOE-张瑜</li>
-								<li class="skill">
-									<span class="cbp_tmicon-html"></span>
-									<span class="fa fa-css3"></span>
-									<span><b>JS</b></span>
-									<span class="link"><a target="_blank" href="http://huangxuan.me/senova/">Link</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>-->
-				</ul>
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- 标签云 -->
+			<div id='tag_cloud' class="tags">
+				{% for tag in site.tags %}
+				<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+				{% endfor %}
 			</div>
+
+            <!--<blockquote class="tag-comments">
+                标签命名规范：
+                    <li>行业观察、职位、公司优先使用中文</li>
+                    <li>外国产品、术语优先使用英文</li>
+            </blockquote>-->
+
+            <!-- 标签列表 -->
+			{% for tag in site.tags %}
+			<div class="one-tag-list">
+			  	<span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
+                    <span class="tag-text">{{ tag[0] }}</span>
+                </span>
+				{% for post in tag[1] %}
+				  <!-- <li class="listing-item">
+				  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+				  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+				  </li> -->
+				 <div class="post-preview">
+				    <a href="{{ post.url | prepend: site.baseurl }}">
+				        <h2 class="post-title">
+                            {{ post.title }}
+				        </h2>
+				        {% if post.subtitle %}
+				        <h3 class="post-subtitle">
+				            {{ post.subtitle }}
+				        </h3>
+				        {% endif %}
+				    </a>
+				    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+				</div>
+				<hr>
+				{% endfor %}
+			</div>
+			{% endfor %}
+
 		</div>
-	</body>
-</html>
+	</div>
+</div>
