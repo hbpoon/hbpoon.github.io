@@ -4,9 +4,17 @@ title: "Posts"
 description: "Hey, this is HB."
 header-img: "img/post-bg-rwd.jpg"
 ---
-</head>
-
-<body>
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hux - Timeline</title>
+		<link rel="stylesheet" type="text/css" href="css/timeline.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
 		<div class="container" style="margin:0;padding:0;width:100%;">
 			<header>
 			  <h1>&nbsp;</h1>
@@ -22,115 +30,28 @@ header-img: "img/post-bg-rwd.jpg"
 							  <li>随便拍的天桥，Short on Oneplus 3T</li>
 								<li class="skill"><span class="link"><a target="_blank" href="https://raw.githubusercontent.com/hbpoon/hbpoon.github.io/master/img/APtianqiao1.jpg">原图</a></span>
 								</li>
-    <p></p>
-</div>
-
-<!-- English Version -->
-<!-- <div class="en post-container">
-    <blockquote><p>Yet another iOS Developer. <br>
-    Yet another Life-long Student.</p></blockquote>
-
-    <p>Hi, I am <strong>Baiying Qiu</strong>，you can call me <strong>BY</strong>. I am an iOS software engineer and currently working in Xiamen</p>
-
-    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.com/qiubaiying">Github·BY</a>.</p>
-    
-    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
-
-    <h5>Talks</h5>
-
-    <ul>
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
-    <li><a href="https://qiubaiying.github.io">BY</a></li>
-    </ul>
-</div> -->
-
-<!-- Handle Language Change -->
-<script type="text/javascript">
-    // get nodes
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    var $select = document.querySelector("select");
-
-    // bind hashchange event
-    window.addEventListener('hashchange', _render);
-
-    // handle render
-    function _render(){
-        var _hash = window.location.hash;
-        // en
-        if(_hash == "#en"){
-            $select.selectedIndex = 1;
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        // zh by default
-        }else{
-            // not trigger onChange, otherwise cause a loop call.
-            $select.selectedIndex = 0;
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }
-    }
-
-    // handle select change
-    function onLanChange(index){
-        if(index == 0){
-            window.location.hash = "#zh"
-        }else{
-            window.location.hash = "#en"
-        }
-    }
-
-    // init
-    _render();
-</script>
-
-
-<!-- Gitalk 评论 start  -->
-{% if site.gitalk.enable %}
-<!-- Gitalk link  -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-    <script type="text/javascript">
-    var gitalk = new Gitalk({
-    clientID: '{{site.gitalk.clientID}}',
-    clientSecret: '{{site.gitalk.clientSecret}}',
-    repo: '{{site.gitalk.repo}}',
-    owner: '{{site.gitalk.owner}}',
-    admin: ['{{site.gitalk.admin}}'],
-    distractionFreeMode: {{site.gitalk.distractionFreeMode}},
-    id: 'about',
-    });
-    gitalk.render('gitalk-container');
-</script>
-{% endif %}
-<!-- Gitalk end -->
-
- <!-- disqus 评论框 start  -->
-{% if site.disqus.enable %}
-
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
-    </div>
-</div>
-<!-- disqus 评论框 end -->
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus.username}}";
-    var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-{% endif %}
-
+						  </ul>
+						</div>
+					</li>
+					<!--<li>
+						<div class="cbp_tmlabel">
+							<h2>SENOVA WebApp</h2>
+							<img src="images/senova.jpg">
+							<ul>
+								<li>《多媒体交互设计一》结课作业，以北汽“绅宝”为目标品牌，iPad 为主要平台进行的 App 设计，旨在用一种可交互的方式介绍“绅宝”车型。完全采用 Html5 技术开发，可添加至主屏幕离线运行。着力于触控交互体验的优化与优雅的动画设计。</li>
+								<li>Responsible : Front-End，Interaction，Product</li>
+								<li>Partner : ZOE-张瑜</li>
+								<li class="skill">
+									<span class="cbp_tmicon-html"></span>
+									<span class="fa fa-css3"></span>
+									<span><b>JS</b></span>
+									<span class="link"><a target="_blank" href="http://huangxuan.me/senova/">Link</a></span>
+								</li>
+							</ul>
+						</div>
+					</li>-->
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
