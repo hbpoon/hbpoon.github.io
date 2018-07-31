@@ -17,19 +17,7 @@ header-img: "img/bg3.jpg"
 </head>
 
 
-<body>
-<a href="https://hbpoon.github.io/help/">視頻源使用方法
-</a>
-</body>
-</html>
-<p>
-<body>
 
-
-    
-    
-
-    
     
     
 <table width="400" height="311" border="0">
@@ -417,7 +405,15 @@ function copyUrl(){
     <td height="237"><a href="http://125.88.94.135:30001/PLTV/88888905/224/3221227997/10000100000000060000000006912176_0.smil"><img src="https://raw.githubusercontent.com/hbpoon/hbpoon.github.io/master/img/L4K.jpg" width="400" height="400" /></a></td>
   </tr>
   <tr>
-    <td><div align="center">需要長按複製連結到播放器</div></td>
+    <td><div align="center"><input type="text" size="20" id="url" value="http://125.88.94.135:30001/PLTV/88888905/224/3221227997/10000100000000060000000006912176_0.smil">
+<script type="text/javascript">
+function copyUrl(){
+ var url = document.getElementById("url").value;
+ window.clipboardData.setData("Text",url);
+ alert("复制链接成功！");
+}
+</script>
+<input type="button" value="复制链接" onClick="url.select();document.execCommand('Copy')">
   </tr>
 </table>
 </body>
