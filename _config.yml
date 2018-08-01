@@ -8,9 +8,7 @@ keyword: "海斌, HB海斌, HB, HoiBan"
 url: "https://github.com/hbpoon/hbpoon.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-<audio autoplay="autoplay">
-  <source src="http://dl.stream.qqmusic.qq.com/M800003TN3vS3T18c2.mp3?vkey=93662A7C0BB0025F1843FF41FE203411D4AFF88C6C606D5142DA01F10DF0BC876CBE9BDCB7CA9878BC8C66689B195612CB35D16690179DAE&guid=5150825362&fromtag=1" />
-</audio>
+
 
 # Publish posts or collection documents with a future date.
 future: false
