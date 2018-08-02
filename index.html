@@ -2,25 +2,8 @@
 layout: page
 description: "如果很怕黑，就比黑更黑"
 ---
-
-
-
-<!-- Language Selector -->
-<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
-</select> -->
-
-<!-- Chinese Version -->
-<div class="zh post-container">
-
-
-
-
 <div align="center"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=550 src="//music.163.com/outchain/player?type=0&id=517171111&auto=1&height=430"></iframe>
-
-
-    {% for post in paginator.posts %}
+{% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
