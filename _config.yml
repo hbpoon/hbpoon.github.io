@@ -82,8 +82,8 @@ service-worker: true
 
 
 
-# Social   
-Social : [
+# Friends   
+Friends : [
     {
         title: "Bilibili",
         href: "https://space.bilibili.com/14706181/#/video"
