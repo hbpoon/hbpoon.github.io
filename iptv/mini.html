@@ -19,17 +19,39 @@ header-img: "img/fm/05.jpg"
 <body>
 <table width="400" border="0">
   <tr>
-    <td> <SCRIPT LANGUAGE="JavaScript">
+    <td><a href="javascript:adClick('http://www.baitv.com/ext/gztv/gztv1/', 'http://play.gztv.com/live/23436_dc2089877e7111e892905cb9018cf0d4.m3u8');">廣州綜合HD1</a></td>
+    <td><a href="javascript:adClick('rtmp://play.gztv.com/live/23436_dc2089877e7111e892905cb9018cf0d4', 'http://www.baitv.com/ext/gztv/gztv1/');">廣州綜合HD2</a></td>
+  </tr>
+  <tr>
+    <td height="104" colspan="2"> <SCRIPT LANGUAGE="JavaScript">
 function adClick(ad, site) {
 window.open(ad);
 window.location = site;}
-</script> <a href="javascript:adClick('http://www.baitv.com/ext/gztv/gztv1/', 'http://play.gztv.com/live/23436_dc2089877e7111e892905cb9018cf0d4.m3u8');">廣州綜合HD1</a></td>
-    <td> <SCRIPT LANGUAGE="JavaScript">
+</script> <SCRIPT LANGUAGE="JavaScript">
 function adClick(ad, site) {
 window.open(ad);
 window.location = site;}
-</script> 
-    <a href="javascript:adClick('rtmp://play.gztv.com/live/23436_dc2089877e7111e892905cb9018cf0d4', 'http://www.baitv.com/ext/gztv/gztv1/');">廣州綜合HD2</a></td>
+</script>
+  <input type="button" value="展开↓" onClick="m(this)">
+<div id="D" style="display:none;border:1px solid red;margin-top:10px;width:300px;line-height:180%;">
+<video id="video1" width="420" style="margin-top: 15xp;" controls>
+<source src="https://acfun.iqiyi-kuyun.com/ppvod/0A7B8005398F1992795559E2E8552DC7.m3u8" type="video/mp4" /><br>
+
+</div>
+<script>
+var F=false;
+function m(obj){
+if(F){
+document.getElementById('D').style.display="none";
+obj.value="展开↓";
+F=false;
+}else{
+document.getElementById('D').style.display="";
+obj.value="收缩↑"
+F=true;
+}
+}
+</script></td>
   </tr>
 </table>
 </body>
