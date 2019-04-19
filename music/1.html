@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<link href="buttons.css" rel="stylesheet" type="text/css">
+<link href="buttons2.css" rel="stylesheet" type="text/css">
 <head>
 <title>Music</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
 <!-- CSS -->
     <link rel="shortcut icon" href="https://hbpoon.github.io/img/favicon.ico">
-	<link href="https://hbpoon.github.io/css/buttons.css" rel="stylesheet" type="text/css">
+    <link href="https://hbpoon.github.io/css/buttons.css" rel="stylesheet" type="text/css">
     <link href="https://hbpoon.github.io/css/music/APlayer.min.css" rel="stylesheet" type="text/css">
     <link href="https://hbpoon.github.io/css/music/APlayer.min.js" rel="stylesheet" type="text/css"> 
     
@@ -21,7 +23,7 @@
     
     
     
-	<style type="text/css">
+<style type="text/css">
 		body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			color: #fff;
@@ -44,7 +46,7 @@
         	color: #fff;
         }
 	</style>
-    
+
 
 <div class="wrapper">
     <!--背景图片-->
@@ -58,64 +60,102 @@ background-size:cover;
 
     <!-- Page Header -->
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<div class="site-heading" id="tag-heading">
-                    <div align="center">
-                    
+    <div class="container">
+       
 <strong><span style="font-size: 60px;color:#ffffff;">Music</span></strong> 
-
-<table width="400">
-  <tr>
-    <td><div class="item">
-  <div class="input-group">
-  <h3><div align="left" style="color:#ffffff">QQ音樂320K</div></h3>
-    <input type="text" id="tongyong" name="320K" placeholder="  輸入音樂ID" style="color:#31c27c;background:#ffffff;border:2px solid #ffffff;width:330px;height: 28px;">
-    <button class="button button-square button-square"><i class="fa fa-plus"></i>播放</button>
-  </div>
-  </div>
-  <div class="item">
-  </div>
-  <div class="input-group">
-  <h3><div align="left" style="color:#ffffff">QQ音樂FLAC</div></h3>
-    <input type="text" id="tongyong" name="FLAC" placeholder="  輸入音樂ID" style="color:#31c27c;background:#ffffff;border:2px solid #ffffff;width:330px;height: 28px;">
-    <button class="button button-square button-square"><i class="fa fa-plus"></i>播放</button>
-  </div>
-  <div class="item">
-  </div>
-  <div class="input-group">
-  <h3><div align="left" style="color:#ffffff">QQ音樂搜索</div></h3>
-    <input type="text" id="tongyong" name="music" placeholder="  搜索音樂/歌手" style="color:#31c27c;background:#ffffff;border:2px solid #ffffff;width:330px;height: 28px;">
-    <button class="button button-square button-square"><i class="fa fa-plus"></i>搜索</button>
-  </div>
-  <div class="item">
-  </div>
-  <div class="input-group">
-  <h3><div align="left" style="color:#ffffff">網易雲音樂解析</div></h3>
-    <input type="text" id="tongyong" name="FLAC" placeholder="  輸入音樂ID" style="color:#ed0802;background:#ffffff;border:2px solid #ffffff;width:330px;height: 28px;">
-    <button class="button button-square button-square"><i class="fa fa-plus"></i>播放</button>
-  </div>
-  <div class="item">
-  </div>
-  <div class="input-group">
-  <h3><div align="left" style="color:#ffffff">網易雲音樂搜索</div></h3>
-    <input type="text" id="tongyong" name="FLAC" placeholder="  搜索音樂/歌手" style="color:#ed0802;background:#ffffff;border:2px solid #ffffff;width:330px;height: 28px;">
-    <button class="button button-square button-square"><i class="fa fa-plus"></i>搜索</button>
-  </div>
-  <div class="item">
-  </div>
-  <div class="input-group"
-</td>
-  </tr>
-</table>
-
-<body>
-<table width="500" border="0">
+<br>
+<br>
+<br>
+<br>
+<div align="center">
+<table width="400" border="0">
   <tr>
     <td>
 
+
+    <style>
+        span{float: left;display: inline-block;height: 30px;}
+        input{border: 0 none;}
+        .span1{width: 170px;position: relative;}
+        .input{height: 20px;width: 160px;padding: 10px 5px;position: absolute;top: 0;}
+        .button{height: 40px;font: normal 18px/40px "微软雅黑";}
+
+    </style>
+
+<body>
+
+<form>
+<h3><div align="left" style="color:#ffffff">QQ音樂320K</div></h3>
+    <div class="box">
+        <span class="span1">
+            <input type="text" class="input" id="tongyong" name="320K" placeholder="  輸入音樂ID" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#31c27c;outline:none;">
+        </span>
+        <span class="span2">
+            <button class="button" value="播放"  class="button">播放</button>
+        </span>
+    </div>
+      </form>
+<br>
+</br>
+ <form>
+<h3><div align="left" style="color:#ffffff">QQ音樂FLAC</div></h3>
+    <div class="box">
+        <span class="span1">
+            <input type="text" class="input" id="tongyong" name="320K" placeholder="  輸入音樂ID" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#31c27c;outline:none;">
+        </span>
+        <span class="span2">
+            <button class="button" value="播放"  class="button">播放</button>
+        </span>
+    </div>
+      </form> 
+<br>
+</br>
+<form>
+<h3><div align="left" style="color:#ffffff">QQ音樂搜索</div></h3>
+    <div class="box">
+        <span class="span1">
+            <input type="text" class="input" id="tongyong" name="320K" placeholder="  搜索音樂/歌手" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#31c27c;outline:none;">
+        </span>
+        <span class="span2">
+            <button class="button" value="播放"  class="button">播放</button>
+        </span>
+    </div>
+      </form>
+<br>
+</br>  
+<body>
+<form>
+<h3><div align="left" style="color:#ffffff">網易雲音樂解析</div></h3>
+    <div class="box">
+        <span class="span1">
+            <input type="text" class="input" id="tongyong" name="320K" placeholder="  輸入音樂ID" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#ed0802;outline:none;">
+        </span>
+        <span class="span2">
+            <button class="button" value="播放"  class="button">播放</button>
+        </span>
+    </div>
+      </form>
+<br>
+</br>
+<form>
+<h3><div align="left" style="color:#ffffff">網易雲音樂搜索</div></h3>
+    <div class="box">
+        <span class="span1">
+            <input type="text" class="input" id="tongyong" name="320K" placeholder="  搜索音樂/歌手" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#ed0802;outline:none;">
+        </span>
+        <span class="span2">
+            <button class="button" value="播放"  class="button">播放</button>
+        </span>
+    </div>
+      </form>
+  </tr>
+</table>
+<br>
+</br>
+<div align="left">
+<div class="container">
   		<div class="container">
-        <h3>With lyrics</h3>
+        <h3>播放器</h3>
 	        <div id="player3" class="aplayer">
 	            <pre class="aplayer-lrc-content">
 [by:KiuSerni]
@@ -159,32 +199,7 @@ background-size:cover;
 
 	<script src="https://hbpoon.github.io/css/music//APlayer.min.js"></script>
     <script>
-        var ap1 = new APlayer({
-            element: document.getElementById('player1'),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-                title: '～趣緻的響鈴～Drunk Text Me',
-                author: 'Serrini樹妮',
-                url: 'https://raw.githubusercontent.com/hbpoon/hbpoon.github.io/master/music/Drunk%20Text%20Me.mp3',
-                pic: 'http://p2.music.126.net/5fhDMiBRRhc-dTCTrg0ngw==/109951163217448220.jpg?param=390y390'
-            }
-        });
-        ap1.init();
-        var ap2 = new APlayer({
-            element: document.getElementById('player2'),
-            narrow: true,
-            autoplay: false,
-            showlrc: false,
-            music: {
-                title: '～趣緻的響鈴～Drunk Text Me',
-                author: 'Serrini樹妮',
-                url: 'https://raw.githubusercontent.com/hbpoon/hbpoon.github.io/master/music/Drunk%20Text%20Me.mp3',
-                pic: 'http://p2.music.126.net/5fhDMiBRRhc-dTCTrg0ngw==/109951163217448220.jpg?param=390y390'
-            }
-        });
-        ap2.init();
+
         var ap3 = new APlayer({
             element: document.getElementById('player3'),
             narrow: false,
@@ -200,14 +215,9 @@ background-size:cover;
         ap3.init();
     </script>
   
-  </td>
-  </tr>
-</table>
+  
 
-
-
-</form>
-  </div>
+</div>
 </header>
 <script>
 
@@ -215,14 +225,16 @@ background-size:cover;
          
   
     <!-- Footer -->
+    
 <div align="center">
 <body>
 <style>
-a:hover,a:visited{color:#666;}  
+a:hover,a:visited{color:#ffffff;}  
 </style> 
 <h5><a href="https://y.qq.com/" target="new">QQMusic</a> | <a href="https://music.163.com/" target="new">NetEaseMusic</a> | <a href="https://www.xiami.com/" target="new">Xiami </a><h5>
 
-<h5><div align="center" style="color:#666">Copyright &copy; HB Blog 2019 </div></h5> 
+<h5><div align="center" style="color:#ffffff
+">Copyright &copy; HB Blog 2019 </div></h5> 
 </body>
           
                
