@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="buttons.css" rel="stylesheet" type="text/css">
-<link href="buttons2.css" rel="stylesheet" type="text/css">
 <head>
 <title>Music</title>
     <meta charset="utf-8">
@@ -12,8 +10,8 @@
 <!-- CSS -->
     <link rel="shortcut icon" href="https://hbpoon.github.io/img/favicon.ico">
     <link href="https://hbpoon.github.io/css/buttons.css" rel="stylesheet" type="text/css">
-    <link href="https://hbpoon.github.io/css/music/APlayer.min.css" rel="stylesheet" type="text/css">
-    <link href="https://hbpoon.github.io/css/music/APlayer.min.js" rel="stylesheet" type="text/css"> 
+<link href="aplayer/APlayer.min.css" rel="stylesheet" type="text/css">
+<link href="https://hbpoon.github.io/css/music/APlayer.min.js" rel="stylesheet" type="text/css"> 
     
     
                 </style>
@@ -29,10 +27,12 @@
 			color: #fff;
         }
         .container {
-            max-width: 32rem;
-            margin-left: auto;
+            max-width: 24.4rem;
+			max-height: 150px;
+            margin-left: 0rem;
             margin-right: auto;
-			color: #fff;
+			color: #ed0802;
+			background-color: #fff;
         }
         hr {
             display: block;
@@ -43,7 +43,7 @@
             border: 0;
         }
         .aplayer .aplayer-info .aplayer-music .aplayer-author{
-        	color: #fff;
+        	color: #ed0802;
         }
 	</style>
 
@@ -67,7 +67,7 @@ a:hover,a:visited,a:link{color:#ffffff;}
 a:hover{color:#ed0802;} 
 a:hover,a:visited,a:link{text-decoration:none}
 </style> 
-<h5><div align="left" style="color:#ffffff"><a href="https://hbpoon.github.io/music/2.html" target="new">手機版</a></div></h5>
+
 
 <div align="center">
 <table width="400" border="0">
@@ -76,10 +76,10 @@ a:hover,a:visited,a:link{text-decoration:none}
 
 
     <style>
-        span{float: left;display: inline-block;height: 30px;}
+        span{float: left;display: inline-block;height: 24px;}
         input{border: 0 none;}
-        .span1{width: 170px;position: relative;}
-        .input{height: 20px;width: 160px;padding: 10px 5px;position: absolute;top: 0;}
+        .span1{width: 250px;position: relative;}
+        .input{height: 20px;width: 240px;padding: 10px 5px;position: absolute;top: 0;}
         .button{height: 40px;font: normal 18px/40px "微软雅黑";}
 
     </style>
@@ -92,7 +92,6 @@ a:hover,a:visited,a:link{text-decoration:none}
 
 <form>
 <h3><div align="left" style="color:#ffffff">QQ音樂320K</div></h3>
-    <div class="box">
         <span class="span1">
             <input type="text" class="input" id="tongyong" name="320K" placeholder="  輸入音樂ID" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#31c27c;outline:none;">
         </span>
@@ -105,7 +104,6 @@ a:hover,a:visited,a:link{text-decoration:none}
 </br>
  <form>
 <h3><div align="left" style="color:#ffffff">QQ音樂FLAC</div></h3>
-    <div class="box">
         <span class="span1">
             <input type="text" class="input" id="tongyong" name="320K" placeholder="  輸入音樂ID" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#31c27c;outline:none;">
         </span>
@@ -118,12 +116,11 @@ a:hover,a:visited,a:link{text-decoration:none}
 </br>
 <form>
 <h3><div align="left" style="color:#ffffff">QQ音樂搜索</div></h3>
-    <div class="box">
         <span class="span1">
             <input type="text" class="input" id="tongyong" name="320K" placeholder="  搜索音樂/歌手" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#31c27c;outline:none;">
         </span>
         <span class="span2">
-            <button class="button" value="播放"  class="button">播放</button>
+            <button class="button" value="播放"  class="button">搜索</button>
         </span>
     </div>
       </form>
@@ -132,7 +129,6 @@ a:hover,a:visited,a:link{text-decoration:none}
 <body>
 <form>
 <h3><div align="left" style="color:#ffffff">網易雲音樂解析</div></h3>
-    <div class="box">
         <span class="span1">
             <input type="text" class="input" id="tongyong" name="320K" placeholder="  輸入音樂ID" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#ed0802;outline:none;">
         </span>
@@ -145,18 +141,17 @@ a:hover,a:visited,a:link{text-decoration:none}
 </br>
 <form>
 <h3><div align="left" style="color:#ffffff">網易雲音樂搜索</div></h3>
-    <div class="box">
         <span class="span1">
             <input type="text" class="input" id="tongyong" name="320K" placeholder="  搜索音樂/歌手" onkeydown="if(event.keyCode==13){searchList();return true}" style="color:#ed0802;outline:none;">
         </span>
         <span class="span2">
-            <button class="button" value="播放"  class="button">播放</button>
+            <button class="button" value="播放"  class="button">搜索</button>
         </span>
     </div>
       </form>
 <br>
-</br>
-<h3><div align="left" style="color:#ffffff">README</div></h3>
+<br>
+<h3><div align="left" style="color:#ffffff">♫ 音樂播放器</div></h3>
 
 
 
@@ -164,38 +159,71 @@ a:hover,a:visited,a:link{text-decoration:none}
 
 
 <div class="container">
-  		<div class="container">
-        <h3>With lyrics</h3>
+        <div style="font-size: 1px;">&nbsp;</div>
 	        <div id="player3" class="aplayer">
 	            <pre class="aplayer-lrc-content">
-[by:KiuSerni]
-[00:00.000] 作曲 : Serrini
-[00:01.000] 作词 : Serrini
-[00:03.00]编曲：Hirsk
-[00:11.00](Drunk Text Me)
-[00:14.90]就趁 我喝醉的一次 笑著说 I love you
-[00:21.43]就趁醉到有点诗意 靠近你 I love you
-[00:28.37]即使我被你一笑带过 你也尽责 任来照顾
-[00:35.56]就趁我自制再凋零 把你片刻的禁锢
-[00:48.14]就趁 我喝醉的一次 靠近你 I love you
-[00:54.98]念到我过去的失意 看著你 I love you
-[01:01.98]即使你会笑著矫正我 「我地会友谊永固」
-[01:09.02]就算我自信再凋零 不怕你睇穿我噜
-[01:22.00](其实，嗰次打边炉既时候
-[01:27.00]我已经好想好想同你讲…)
-[01:34.26]问我再要说谎几次 会习惯 I hide the truth
-[01:40.92]让我借醉再不经意 趁乱说 I love you
-[01:47.85]即使我被你一笑带过 你也不会暗藏 厌恶
-[01:54.89]就趁我乱唱歌不停 把你耳朵都禁锢
-[02:06.02]问到你也会否可以 靠近我 爱してる
-[02:12.65]习惯看我撒谎的你 够尽兴 キズしてる
-[02:19.70]深知你最爱是嘲笑我 我也未会暗藏厌恶
-[02:26.64]自信我引你 笑不停 这也なんか大丈夫
-[02:35.69]念到你再腼腆不已 我就更obsessed with you
-[02:42.57]任我再吓怕你几次 你亦会时常维护
-[02:49.61]一天你扮醉就亲吻
-[02:53.61]我我就ready to make out with you
-[02:56.54]我像最趣緻的响铃 一浸已经可以噜
+[00:00.36]作曲 : KENI
+[00:10.66]作词 : Goran Tse/KENI
+[00:20.65]KENI / 除我之外 Feat. YUKI TUNG
+[00:31.58]春夏說再見
+[00:34.28]秋風開始吹大樹落葉
+[00:38.81]終於等到這個療癒的氣候
+[00:42.03]愛上了街頭
+[00:43.47]街燈下走走
+[00:47.15]在燈下辨識陌生城市
+[00:50.50]看著街道的一對對情侶相擁
+[00:55.16]每個笑容每份感動
+[00:58.63]觸起我的痛
+[01:00.00]一個人開始的生活
+[01:07.10]可我都習慣
+[01:13.61]缺少了我愛的那個人
+[01:21.58]過我的人生
+[01:24.33]到現在什麼都不問
+[01:28.42]開始
+[01:29.27]除我之外
+[01:34.56]Listen
+[01:36.73]寂寞的自由或許我應該接受
+[01:40.50]能掩蓋心靈的缺口
+[01:42.61]唯一是這右手
+[01:45.46]忘記你是自己揑造的藉口
+[01:51.36]忘記你借我的火
+[01:52.43]忘記你曾經愛過
+[01:54.96]忘記你離開了我
+[01:56.14]忘記你忘記得灑脫
+[01:58.77]你欠過我什麼
+[02:00.79]你不要再多說
+[02:02.42]以後你是你
+[02:03.42]我是我
+[02:05.89]一個人開始的生活
+[02:12.84]可我都習慣
+[02:19.36]缺少了我愛的那個人
+[02:27.02]過我的人生
+[02:29.81]到現在什麼都不問
+[02:34.06]開始
+[02:34.82]除我之外
+[02:49.57]愛上你的最後一天
+[02:52.87]愛上你的最後一年
+[02:56.50]愛上你的最後一吻
+[03:00.16]然後過你我人生
+[03:03.99]一個人開始的生活
+[03:11.06]可我都習慣
+[03:17.54]缺少了我愛的那個人
+[03:25.25]過我的人生
+[03:28.17]到現在什麼都不問
+[03:32.11]開始
+[03:32.95]除我之外
+[03:33.37]Hey girl
+[03:34.35]那個下雨天看著你離開
+[03:37.00]我都沒有哭出來
+[03:41.05]回憶面存在的依賴
+[03:43.46]最後都成為了傷害
+[03:46.42]談不上是愛
+[03:47.80]請你不要說你還在
+[03:49.44]一切除了你之外
+[03:51.27]有誰還在糾纏就算活該
+[03:55.40]要走得痛快
+[03:58.30]分得更痛快
+
 
 	            </pre>
 	        </div>
@@ -203,7 +231,7 @@ a:hover,a:visited,a:link{text-decoration:none}
 	        <div id="player1" class="aplayer"></div>
 
           <div id="player2" class="aplayer"></div>
-	    </div>
+      </div>
 		<footer class="related">
 
 
@@ -216,16 +244,16 @@ a:hover,a:visited,a:link{text-decoration:none}
             autoplay: false,
             showlrc: true,
             music: {
-                title: '～趣緻的響鈴～Drunk Text Me',
-                author: 'Serrini樹妮妮',
-                url: 'https://raw.githubusercontent.com/hbpoon/hbpoon.github.io/master/music/Drunk%20Text%20Me.mp3',
-                pic: 'http://p2.music.126.net/5fhDMiBRRhc-dTCTrg0ngw==/109951163217448220.jpg?param=390y390'
+                title: 'KENI/童靖文&nbsp;',
+                author: '除我之外',
+                url: 'https://raw.githubusercontent.com/hbpoon/hbpoon.github.io/master/music/NWZW.mp3',
+                pic: 'http://p2.music.126.net/UqxDaOl6YlYX9OgMyXSP8w==/109951163958727352.jpg?param=400y400'
             }
         });
         ap3.init();
     </script>
   
-  
+  <h3><div align="left" style="color:#ffffff">ID獲取說明</div></h3>
 
 </div>
 </header>
@@ -234,8 +262,31 @@ a:hover,a:visited,a:link{text-decoration:none}
 </script>
     </tr>
 </table>
-<br>
-</br>       
+     
+    <style>
+        .box{width: 356px;height: 110px;background-color: #ffffff;padding: 5px;}
+    </style>  
+
+
+<table width="400" border="0">
+  <tr>
+    <td>
+        <div class="box" style="font-size: 13px;color:#888;">
+       <strong>QQ MUSIC</strong><br>
+歌曲:https://y.qq.com/n/yqq/song/<a style="color:#31c27c" href="https://y.qq.com/n/yqq/song/004KBrKG3Uq0t2.html" target="new">004KBrKG3Uq0t</a>.html<br>
+ID:004KBrKG3Uq0t2<br>
+&nbsp;<br>
+<strong>網易雲音樂</strong><br>
+歌曲:https://music.163.com/#/song?id=<a style="color:#ed0802" href="https://music.163.com/#/song?id=556459092" target="new">556459092</a><br>
+ID:556459092<br>
+</td>
+  </tr>
+</table>
+
+  
+  
+  
+  
   
     <!-- Footer -->
     
