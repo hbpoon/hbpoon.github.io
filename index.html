@@ -16,40 +16,23 @@ description: "如果很怕黑，就比黑更黑"
 <head>
 
 
-<script language = JavaScript>
-
+    <script language = JavaScript>
 function password() {
-
 var testV = 1;
-
-var pass1 = prompt('请输入密码:', '');
-
+var pass1 = prompt('請輸入密碼:', '');
 while (testV < 3) {
-
 if (!pass1) history.go(-1);
-
-if (pass1 == "123456") {
-
-alert('密码正确!');
-
+if (pass1 == "ub1234") {
+alert('密碼正確!');
 break;
-
 }
-
-testV += -1;
-
+testV += 3;
 var pass1 = prompt('密码错误!请重新输入:');
-
 }
-
-if (pass1 != "password" & testV == 3) history.go(-1);
-
+if (pass1 != "password" & testV == 3) history.go(2);
 return " ";
-
 }
-
 document.write(password());
-
 </script>
 
 
