@@ -12,12 +12,24 @@ header-img: "img/fm/05.jpg"
 </select> -->
 
 
-<script language="JavaScript">
-<!--var password="";
-password=prompt('請輸入密碼(2):','');
-if (password != 'pw002')   {alert;
-    window.opener=null; window.close();
-	}  // 密码不正确就关闭//--></script>
+<script language = JavaScript>
+function password() {
+var testV = 1;
+var pass1 = prompt('請輸入密碼(2):', '');
+while (testV < 3) {
+if (!pass1) history.go(-1);
+if (pass1 == "pw002") {
+alert('密碼正確!');
+break;
+}
+testV += -1;
+var pass1 = prompt('密码错误!请重新输入:');
+}
+if (pass1 != "password" & testV == 3) history.go(-1);
+return " ";
+}
+document.write(password());
+</script>
 
 
 <!-- Chinese Version -->
