@@ -1,0 +1,28 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>m3u8地址测试</title>
+
+
+<!doctype html>
+<html>
+<script type="text/javascript" src="http://www.ckplayer.com/Public/ckplayer/x/ckplayer.js"></script>
+<div class="video" style="width: 1000px;height: 600px;"></div>
+<script type="text/javascript">
+	var videoObject = {
+		container: '.video',//“#”代表容器的ID，“.”或“”代表容器的class
+		variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+		autoplay:true,
+		html5m3u8:true,
+		video:'http://ckplayer-video.oss-cn-shanghai.aliyuncs.com/ckplayer-sample/m3u8/cd/index.m3u8'//视频地址
+	};
+	var player=new ckplayer(videoObject);
+</script>
+</div>
+
+</body>
+</html>
+
