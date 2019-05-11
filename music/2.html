@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Music</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+<!-- CSS -->
+    <link rel="shortcut icon" href="https://hbpoon.github.io/img/favicon.ico">
+    <link href="https://hbpoon.github.io/css/buttons.css" rel="stylesheet" type="text/css">
+    <link href="https://hbpoon.github.io/css/music/APlayer2.min.css" rel="stylesheet" type="text/css">
+    <link href="https://hbpoon.github.io/css/music/APlayer.min.js" rel="stylesheet" type="text/css"> 
+
+
+
+   <!--背景图片-->
+<body bgcolor="#282c34">
+
+
+
+
+
+
+
+ <style>
+        span{float:center;display:inline-block;}
+        input{border: 0 none;}
+		select{vertical-align:top;width: 140px;}
+        .span1{width: 375px;position:relative;vertical-align:top;}
+        .input{width: 230px;vertical-align:top;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+		body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			color: #fff;
+        }
+        .container {
+            max-width: 23.85rem;
+			max-height: 100px;
+			height: 100.85rem;
+            margin-left: 0rem;
+            margin-right: auto;
+			color: #ed0802;
+			background-color: #fff;
+        }
+        hr {
+            display: block;
+            width: 30rem;
+            height: 1px;
+            margin: 2.5rem 0;
+            background-color: none;
+            border: 0;
+        }
+        .aplayer .aplayer-info .aplayer-music .aplayer-author{
+        	color: #ed0802;
+
+        }
+	</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+a:hover,a:visited,a:link{color:#888888;}
+a:hover{color:#888888;} 
+a:hover,a:visited,a:link{text-decoration:none}
+</style>
+
+
+
+
+
+
+
+
+<div align="center">
+<table width="390" border="0">
+  <tr>
+    <td height="390"></td>
+  <tr>
+    <td><h2><div align="left" style="color:#ffffff">SEARCH</div></h2></td>
+  </tr>
+  <tr>
+    <td><span class="span1">
+		<div class="search">
+		<select id="option1" name="option1" class="select" style="border:0;height:20px;outline:none;"> 
+                <option value="1">QQMusic</option>
+				<option value="2">NetEase Music</option>
+                <option value="3">KuGou</option>
+				<option value="4">KuWo</option>
+		  </select>
+   
+                     
+                     
+                     
+                       
+			 <input id="inputtext1" class="input" type="text" title="searchs1"
+             style="color:#1e90ff;width:150px;height:18px;outline:none;" placeholder="  Song name,Singer" onkeydown="if(event.keyCode==13){searchList();return true}"
+				name="input" />
+  
+		<!--	<button type="submit" class="button1" onclick="jump()"/></button> -->
+            <input type="button" class="button button-square button-square" value="Search" style="width:60px;height: 20px;" onclick="jump1()" target="new"/></td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+            
+            
+     
+            
+    <script type="text/javascript">
+	function jump1()
+	{
+		var obj=document.getElementById("option1");
+		var index=obj.selectedIndex;
+		var value=obj.options[index].value;
+		var str=document.getElementById("inputtext1").value;
+		    if(value==1)
+			window.open('https://v1.itooi.cn/tencent/search?type=song&pageSize=1&page=0&keyword='+str);
+		    if(value==2)
+			window.open('https://v1.itooi.cn/netease/search?type=song&pageSize=1&page=0&keyword=='+str);
+		    if(value==3)
+		    window.open('https://v1.itooi.cn/kugou/search?type=song&pageSize=1&page=0&keyword=='+str);
+			if(value==4)
+			window.open('https://v1.itooi.cn/kuwo/search?type=song&pageSize=1&page=0&keyword=='+str);
+	}
+</script>
+            
+
+    <script type="text/javascript">
+
+</script>
+
+
+
+
+
+
+
+<table width="390" border="0">
+  <tr>
+    <td><div class="container">
+        <div style="font-size: 1px;">&nbsp;</div>
+	        <div id="player3" class="aplayer">
+	            <pre class="aplayer-lrc-content">
+[00:00.36]作曲 : KENI
+[00:10.66]作词 : Goran Tse/KENI
+[00:20.65]KENI / 除我之外 Feat. YUKI TUNG
+[00:31.58]春夏說再見
+[00:34.28]秋風開始吹大樹落葉
+[00:38.81]終於等到這個療癒的氣候
+[00:42.03]愛上了街頭
+[00:43.47]街燈下走走
+[00:47.15]在燈下辨識陌生城市
+[00:50.50]看著街道的一對對情侶相擁
+[00:55.16]每個笑容每份感動
+[00:58.63]觸起我的痛
+[01:00.00]一個人開始的生活
+[01:07.10]可我都習慣
+[01:13.61]缺少了我愛的那個人
+[01:21.58]過我的人生
+[01:24.33]到現在什麼都不問
+[01:28.42]開始
+[01:29.27]除我之外
+[01:34.56]Listen
+[01:36.73]寂寞的自由或許我應該接受
+[01:40.50]能掩蓋心靈的缺口
+[01:42.61]唯一是這右手
+[01:45.46]忘記你是自己揑造的藉口
+[01:51.36]忘記你借我的火
+[01:52.43]忘記你曾經愛過
+[01:54.96]忘記你離開了我
+[01:56.14]忘記你忘記得灑脫
+[01:58.77]你欠過我什麼
+[02:00.79]你不要再多說
+[02:02.42]以後你是你
+[02:03.42]我是我
+[02:05.89]一個人開始的生活
+[02:12.84]可我都習慣
+[02:19.36]缺少了我愛的那個人
+[02:27.02]過我的人生
+[02:29.81]到現在什麼都不問
+[02:34.06]開始
+[02:34.82]除我之外
+[02:49.57]愛上你的最後一天
+[02:52.87]愛上你的最後一年
+[02:56.50]愛上你的最後一吻
+[03:00.16]然後過你我人生
+[03:03.99]一個人開始的生活
+[03:11.06]可我都習慣
+[03:17.54]缺少了我愛的那個人
+[03:25.25]過我的人生
+[03:28.17]到現在什麼都不問
+[03:32.11]開始
+[03:32.95]除我之外
+[03:33.37]Hey girl
+[03:34.35]那個下雨天看著你離開
+[03:37.00]我都沒有哭出來
+[03:41.05]回憶面存在的依賴
+[03:43.46]最後都成為了傷害
+[03:46.42]談不上是愛
+[03:47.80]請你不要說你還在
+[03:49.44]一切除了你之外
+[03:51.27]有誰還在糾纏就算活該
+[03:55.40]要走得痛快
+[03:58.30]分得更痛快
+
+
+	            </pre>
+	        </div>
+
+	        <div id="player1" class="aplayer"></div>
+
+          <div id="player2" class="aplayer"></div>
+      </div>
+		<footer class="related">
+	</td>
+  </tr>
+    <td><script type="text/javascript">
+function showdiv()
+{ if (document.getElementById("txt_div").style.display=="block") 
+{ document.getElementById("txt_div").style.display="none"; } 
+else 
+{ document.getElementById("txt_div").style.display="block"; } }
+</script>
+<a class="showerweima" onclick="showdiv()" href="javascrript:void(0)"><i class="icon01"></i><span><h3>README</h3></span></a>
+
+<div id="txt_div"style="display:none;color:#ffffff"><h4>
+搜索：輸入"歌手/歌名"進行搜索<br>
+解析：歌曲、專輯、封面，輸入"ID"進行解析</h4></div></div></div></td>
+   </tr> 
+</table>
+
+<script src="https://hbpoon.github.io/css/music//APlayer.min.js"></script>
+    <script>
+
+    var ap1 = new APlayer({
+        element: document.getElementById('player1'),
+        narrow: false,
+        autoplay: false,
+        showlrc: false,
+        music: {
+                title: 'KENI/童靖文&nbsp;',
+                author: '除我之外',
+                url: 'https://raw.githubusercontent.com/hbpoon/hbpoon.github.io/master/music/NWZW.mp3',
+                pic: 'http://p2.music.126.net/UqxDaOl6YlYX9OgMyXSP8w==/109951163958727352.jpg?param=400y400'
+            }
+        });
+        ap1.init();
+    </script>
+
+
+
+
+
+</div> 
+
+
+
+
+
+
+
+</body>
+</html>
