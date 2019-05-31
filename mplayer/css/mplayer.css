@@ -123,7 +123,7 @@
 /* line 103, mplayer.less */
 .mp .mp-lrc {
   width: 600px;
-  height: 550px;
+  height: 500px;
   font-size: 24px;
   overflow: scroll;
   color: #808080;
@@ -142,7 +142,7 @@
 .mp .mp-lrc-close {
   width: 7px;
   height: 7px;
-  background: url("file:///G|/jQuery MPlayer网站音乐播放器插件/img/mplayer_bg.png") no-repeat 0 -56px;
+  background: url("https://hbpoon.github.io/mplayer/img/mplayer_bg.png") no-repeat 0 -56px;
   position: absolute;
   top: -600px;
   right: 120px;
@@ -168,7 +168,7 @@
 .mp .mp-list-toggle {
   width: 37px;
   height: 29px;
-  background: url("file:///G|/jQuery MPlayer网站音乐播放器插件/img/mplayer_bg.png") no-repeat -212px 0;
+  background: url("https://hbpoon.github.io/mplayer/img/mplayer_bg.png") no-repeat -212px 0;
   float: left;
 }
 /* line 141, mplayer.less */
@@ -210,7 +210,7 @@
 .mp .mp-next {
   width: 41px;
   height: 48px;
-  background: url("file:///G|/jQuery MPlayer网站音乐播放器插件/img/mplayer_bg.png") no-repeat 0 -48px;
+  background: url("https://hbpoon.github.io/mplayer/img/mplayer_bg.png") no-repeat 0 -48px;
   float: left;
   margin-top: 8.5px;
   margin-right: 40px;
@@ -239,7 +239,7 @@
   margin-top: -3px;
   margin-right: 50px;
   float: left;
-  background: url("file:///G|/jQuery MPlayer网站音乐播放器插件/img/mplayer_bg.png") no-repeat -150px 0;
+  background: url("https://hbpoon.github.io/mplayer/img/mplayer_bg.png") no-repeat -150px 0;
 }
 /* line 199, mplayer.less */
 .mp .mp-pause:hover {
@@ -254,7 +254,7 @@
   position: absolute;	
   width: 39px;
   height: 36px;
-  background: url("file:///G|/jQuery MPlayer网站音乐播放器插件/img/mplayer_bg.png") no-repeat -2px -180px;
+  background: url("https://hbpoon.github.io/mplayer/img/mplayer_bg.png") no-repeat -2px -180px;
   margin-left: -368px;
   float: left;
   margin-top: 12px;
@@ -290,7 +290,7 @@
 .mp .mp-vol-img {
   width: 50px;
   height: 34px;
-  background: url("file:///G|/jQuery MPlayer网站音乐播放器插件/img/mplayer_bg.png") no-repeat 0 -109px;
+  background: url("https://hbpoon.github.io/mplayer/img/mplayer_bg.png") no-repeat 0 -109px;
   margin-top: -850px;
   margin-left: -285px;
   float: left;
@@ -368,7 +368,7 @@
 }
 /* line 321, mplayer.less */
 .mp .mp-list-box.mp-list-show {
-  height: 551px;
+  height: 501px;
 }
 /* line 325, mplayer.less */
 .mp .mp-list-title {
