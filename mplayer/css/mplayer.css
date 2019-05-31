@@ -31,7 +31,7 @@
 }
 /* line 34, mplayer.less */
 .mp p {
-  color:#f8c6cf;
+  color:#fff;
   font-weight:bold;
 }
 /* line 37, mplayer.less */
@@ -57,7 +57,7 @@
             margin:auto;
   
   border-radius: 0px 0px 0px 0px;
-  background-color: #ff1744;
+  background-color: #000;
   -webkit-transition: left .5s;
   -moz-transition: left .5s;
   -o-transition: left .5s;
@@ -185,7 +185,7 @@
 .mp .mp-pro {
   width: 600px;
   height: 30px;
-  background-color: #c4001d;
+  background-color: #1e1e1e;
 
   position: absolute;
   bottom: 380px;
@@ -196,7 +196,7 @@
 .mp .mp-pro-current {
   width: 0;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #fe1743;
 }
 /* line 169, mplayer.less */
 .mp .mp-btn {
